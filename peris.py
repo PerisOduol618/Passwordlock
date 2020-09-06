@@ -35,16 +35,16 @@ class TestUser(unittest.TestCase):
     # '''
 
     def setup(self):
-        # '''
-        # setup  method to run before each user test cases.
-        # '''
+        #  '''
+        #  setup  method to run before each user test cases.
+        #  '''
         # # self.new_user =User('Peris', 'Oduol', '0duol254')
         self.user_credential = User("PerisOduol", "Oduol254")
 
     def test_init(self):
-        # '''
-        # test _init test case to check if the object is initialized propeyly
-        # '''
+        '''
+        test _init test case to check if the object is initialized propeyly
+        '''
         
         self.assertEqual(self.user_credential.user_name,"PerisOduol")
         self.assertEqual(self.user_credential.password,"Oduol254")
