@@ -17,6 +17,15 @@ def save_user(user):
     '''
     user.save_user()
 
+# def login_user(userName):
+def verify_user(userName, password):
+    '''
+    Function that verifies if user exists.
+    '''
+    check_user = User.check_user(userName, password)
+    return check_user
+
+
 
 def display_user():
     '''
@@ -69,6 +78,41 @@ def password_locker():
         print("sign up")
         print("*" *60)
         userName = input("User name: ")
+        while True:
+
+            print("tp - To type your own pasword:\n gp - To generate random Password")
+            password_Choice = input().strip()
+
+            if password_Choice == 'tp':
+                password = input("Enter Password\n")
+                break
+
+            elif password_Choice == 'gp':
+                password = generate_Password()
+                break
+
+            else:
+                print("Invalid password please try again")
+        save_user(create_newUser(userName,password))
+        print("*"*70)
+        print(f"Hello {userName}, Your account has been created succesfully! Your password is: {password}")
+        print("*"*70)
+
+
+        # elif short_code == "ha":
+        # print("*"*50)
+        # print("Enter your User name and your Password to log in:")
+        # print('*' * 50)
+
+        # userName = input("userName: ")
+        # password = input("password: ")
+        # login = login_user(userName,password)
+
+        # if login_user == login:
+        #     print(f"Hello {userName}.Welcome To PassWord Locker Manager")  
+        #     print('\n')
+      
+        
         
 
 
