@@ -82,11 +82,6 @@ class Credentials:
         if self.account:
             if (acc['account']==account for acc in self.account):
 
-                # new_acc = []
-                # for acc in self.account:
-                #     if not(acc['account'] ==account):
-                #         new_acc.append(acc)
-                # self.account = new_acc
                 self.credential_list = [acc for acc in self.credential_list if not(acc.get('account')==account)]
                 
                 return True
@@ -132,14 +127,6 @@ class Credentials:
         Credentials.credential_list.append(self)
         
 
-    # @classmethod
-    # def copy_credential(cls, site_name):
-    #     '''
-    #     Class method that copies a credentials details after the credentials site_name has been entered
-    #     '''
-    #     find_credential = Credentials.find_by_account(account)
-    #     return pyperclip.copy(find_credential.password)
-
     @classmethod
     def generate_password(self,stringLength=8):
         '''
@@ -155,14 +142,6 @@ class Credentials:
 
 
         
-# c =User('John','Doe')
-# print(c.login('John','Doiiiioioie'))
-# print(Credentials())
-cr = Credentials('aa','b','asas','sdsfd')
-cr.save_credential('add','asdadsad','dsadsad','asdasdad')
-cr.save_credential('ig','asdadsad','dsadsad','asdasdad')
-# print(cr.save_credential('add','asdadsad','dsadsad','asdasdad'))
 
 
      
-print(cr.delete_credential('add'))
