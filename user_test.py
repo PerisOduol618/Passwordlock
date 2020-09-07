@@ -140,11 +140,11 @@ class TestCredentials(unittest.TestCase):
 
         self.assertEqual(Credentials.display_credentials(),Credentials.credential_list)
 
-    # def test_generate_password(self):
-    #     '''
-    #     metthod that tests generate password 
-    #     '''
-    #     self.new_credential.generate_password()
+    def test_generate_password(self):
+        '''
+        metthod that tests generate password 
+        '''
+        self.new_credential.generate_password()
 
 
 if __name__ == '__main__':
