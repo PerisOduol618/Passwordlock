@@ -100,12 +100,12 @@ class Credentials():
     #     return pyperclip.copy(find_credential.password)
 
     # @classmethod
-    # def generate_password(cls):
-    #     '''
-    #     Generate a random password string of letters and digits and special characters
-    #     '''
-    #     password = string.ascii_lowercase + string.ascii_uppercase + "~!@#$%;:^&*"
-    #     return ''.join(random.choice(password) for i in range(password))
+    def generate_password(self,stringLength=8):
+        '''
+        Generate a random password string of letters and digits and special characters
+        '''
+        password = string.ascii_lowercase + string.ascii_uppercase + "~!@#$%;:^&*"
+        return ''.join(random.choice(password) for i in range(int(stringLength)))
 
 
     
