@@ -1,8 +1,6 @@
 import unittest 
-from user import User
-from user import Credentials
-
-
+from user import User,Credentials
+ 
 class TestUser(unittest.TestCase):
 
     '''
@@ -110,18 +108,8 @@ class TestCredentials(unittest.TestCase):
         self.new_credential.delete_credential()
         self.assertEqual(len(Credentials.credential_list),1)
 
-    # def test_search_credential(self):
-    #     '''
-    #     test to check is we can search for  a credential  entry by account name and display the details of the credential
-    #     '''
-    #     self.new_credential.save_credential()
-    #     test_credential = Credentials("Instagram","dainadee", "pepe@gmail.com", "pepe123") 
-    #     test_credential.save_credential()
 
-    #     find_credential = Credentials.search_credential("instagram")
 
-    #     self.assertEqual(find_credential.account,test_credential.account)
-    
     def test_credential_exists(self):
         '''
         Test case to check if a credential exists in the credential_list
